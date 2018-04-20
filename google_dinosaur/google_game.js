@@ -115,7 +115,7 @@ function draw() {
     for(var i=0;i<4;i++){
       image(cloud,cloudx[i],cloudy[i],80,50);
     }
-    image(dinosaur3, 267,dinosaury-20,110,100);
+    image(dinosaur3, 267,dinosaury+5,110,100);
     textSize(180);
     fill(255, 10, 10);
     text('GAMEOVER', 100, 300);    
