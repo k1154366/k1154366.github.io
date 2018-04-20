@@ -10,8 +10,6 @@ var jump=-30;
 var jumpcheak=0;
 var treecheak=0;
 var gameover=0;
-var overy=305;
-
 function preload() {
   cloud = loadImage('cloud.png');
   dinosaur1 = loadImage('dinosaur1.png');
@@ -65,9 +63,6 @@ function draw() {
   }
   //jump
   if(jumpcheak==1){
-    if(gameover==1&&dinosaury>180){
-      overy=dinosaury;
-    }      
     if(gameover==1){
       overy=dinosaury;
     }
@@ -99,7 +94,7 @@ function draw() {
   
   //game over
   
-  if(treex==310&&jump<0){
+  if(treex==290&&jump<0){
     gameover=1;
   }
   
@@ -120,7 +115,10 @@ function draw() {
     for(var i=0;i<4;i++){
       image(cloud,cloudx[i],cloudy[i],80,50);
     }
-    image(dinosaur3, 267,overy,110,100);
+    image(dinosaur3, 267,dinosaury-20,110,100);
+    textSize(180);
+    fill(255, 10, 10);
+    text('GAMEOVER', 100, 300);    
     noLoop();
   }
   
