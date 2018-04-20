@@ -106,8 +106,6 @@ function draw() {
   //over screen
   if(gameover==1&&dinosaury>180){
     background(255,255,255);
-    textSize(180);
-    text('GAMEOVER', 100, 300);
     image(tree, treex+speed, 220,150,180);
     image(ground, groundx1+speed, 300,1600,200);
     image(ground, groundx2+speed, 300,1600,200);
@@ -118,7 +116,7 @@ function draw() {
     image(dinosaur3, 267,dinosaury+5,110,100);
     textSize(180);
     fill(255, 10, 10);
-    text('GAMEOVER', 100, 300);    
+    text('GAMEOVER', 250, 300);    
     noLoop();
   }
   
